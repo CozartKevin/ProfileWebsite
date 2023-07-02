@@ -1,0 +1,31 @@
+nav#main-navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: opacity 0.5s ease;
+  }
+  
+  nav#main-navigation ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    display: block;
+    list-style-type: disc;
+  }
+  
+  nav#main-navigation li {
+    display: inline-block;
+    padding: 5px 0;
+    list-style-position: inside;
+    list-style: none;
+  }
+  
+  nav#main-navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+    cursor: none;
+  }

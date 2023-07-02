@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="canonical" href="Test.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+</head>
+
+<body class="home ">
+  <!-- cursor from https://speckyboy.com/css-javascript-cursor-effects/ | Specifically from this codepen:  https://codepen.io/clementGir/pen/RQqvQx
+    Just a copy pasta from codepen
+  -->
+  <div class="cursor">
+    <div class="cursor__ball cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+    
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="10" width="10">
+        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div>
+  
+
+
+
+<div id="page" class="site">
+
+
+
+  <header id="main-header" class="header">
+    <div class="header-wrap">
+      <div id="HeadWrap" class="header-wrap-inner">
+        <div class="header-left">
+          <!-- Left section content goes here -->
+          <h1 id="name" class="header-name hoverable">Kevin Cozart
+          </h1>
+        </div>
+        <div class="header-right">
+          <nav id="main-navigation" class="nav">
+            <div class="nav-container">
+            <ul id="primary-menu" class="nav-menu">
+              <li><a class="nav-items hoverable" href="#about"><span class="nav-menu-span ">// home </span></a></li>
+              <li><a class="nav-items hoverable" href="#about"><span class="nav-menu-span ">// About </span></a></li>
+              <li><a class="nav-items hoverable" href="#projects"><span class="nav-menu-span ">// Projects</span></a></li>
+              <li><a class="nav-items hoverable" href="#skills"><span class="nav-menu-span ">// Skills</span></a></li>
+              <li><a class="nav-items hoverable" href="#contact"><span class="nav-menu-span ">// Contact </span></a></li>
+            </ul>
+          </div>
+          </nav>
+        
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="content" class="site-content">
+    <div  class="elementor-section-background">
+      
+</div>
+<div class="background"></div>
+
+      <section id="about">
+        <div class="container">
+          <h2>About</h2>
+          <div class="about-content">
+            <!-- <img src="profile-image.jpg" alt="Profile Image"> -->
+            <p>Brief introduction about yourself...</p>
+            <ul class="skills">
+              <li>
+                <img src="Images/skill-icon-1.png" alt="Skill Icon">
+                <span>Skill 1</span>
+              </li>
+              <li>
+                <img src="Images/skill-icon-2.png" alt="Skill Icon">
+                <span>Skill 2</span>
+              </li>
+              <li>
+                <img src="Images/skill-icon-3.png" alt="Skill Icon">
+                <span>Skill 3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="project">
+            <h3>Project Title</h3>
+            <div class="project-thumbnail">
+              <a href="project-details.html">
+                <!-- <img src="project-thumbnail.jpg" alt="Project Thumbnail">-->
+              </a>
+            </div>
+            <p>Project description...</p>
+          </div>
+          <!-- Add more projects here -->
+        </div>
+      </section>
+
+
+      <section id="skills">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skill">
+            <h3>Skill 1</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>Skill 2</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>Skill 3</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>Contact form or interactive buttons for social media and email...</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
