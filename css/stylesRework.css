@@ -1,0 +1,66 @@
+/* Rework CSS for Grid */
+
+.Body {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Page";
+    width: 100%;
+    height: auto;
+  }
+  
+  .Page {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: Page;
+  }
+  
+  .Header { grid-area: 1 / 1 / 2 / 2; }
+  
+  .Content {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Content-Wrapper";
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  
+  .Content-Wrapper {
+    grid-area: Content-Wrapper; 
+    width: 100%; 
+  }
+  
+  html, body , .Body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* For presentation only, no need to copy the code below */
+  
+  .Body * {
+    border: 1px solid red;
+    position: relative;
+  }
+  
+  .Body *:after {
+    content:attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  section {
+    display: block;  
+    padding: 100px 50px 0;
+  }
