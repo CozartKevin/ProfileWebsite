@@ -5,26 +5,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Kevin Cozart - Curisity Driven Sofware Engineer</title>
     <link rel="stylesheet" href="css/stylesRework.css">
-    <link rel="canonical" href="Test.html">
+    <link rel="canonical" href="index.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  
   </head>
 
-<body class="Body">
-    <div class="Page">
-      <div class="Header">Header</div>
-      <div class="Content">
-        <div class="Content-Wrapper">
-        <section class="Home">Home </section>
-        <section class="Expertise"> Expertise </section>
-        <section class="Projects"> Projects</section>
-        <section class="Experience"> Experience </section>
-        <section class="Contact"> Contact </section>
+  <body class="body home">
+
+<!-- cursor from https://speckyboy.com/css-javascript-cursor-effects/ | Specifically from this codepen:  https://codepen.io/clementGir/pen/RQqvQx
+    Just a copy pasta from codepen
+  -->
+  <div class="cursor">
+    <div class="cursor__ball cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
     </div>
+    
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="10" width="10">
+        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div>
+
+
+
+    <div id="page" class="site">
+      <header id="main-header" class="header"> 
+        <div class="header-wrapper">
+          <div class="header-wrapper-inner">
+            <div class="header-left">
+              <h1 id="name" class="header-name hoverable"> Kevin Cozart
+            </h1>
+          </div>
+            <div class="header-right">
+            <nav id="main-navigation" class="nav">
+              <div class="nav-container">
+              <ul id="primary-menu" class="nav-menu">
+                <li class="hoverable"><a class="nav-items " href="#about"><span class="nav-menu-span ">// home </span></a></li>
+                <li><a class="nav-items hoverable" href="#about"><span class="nav-menu-span ">// About </span></a></li>
+                <li><a class="nav-items hoverable" href="#projects"><span class="nav-menu-span ">// Projects</span></a></li>
+                <li><a class="nav-items hoverable" href="#skills"><span class="nav-menu-span ">// Skills</span></a></li>
+                <li><a class="nav-items hoverable" href="#contact"><span class="nav-menu-span ">// Contact </span></a></li>
+              </ul>
+            </div>
+            </nav> </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="content-wrapper">
+          <div class="content-wrapper-sections">
+          <section class="home">Home </section>
+          <section class="expertise"> Expertise </section>
+          <section class="projects"> Projects</section>
+          <section class="experience"> Experience </section>
+          <section class="contact"> Contact </section>
+     
+          </div>
+        </div>
       </div>
     </div>
-  <body>
+    <script src="js/script.js"></script>
+  </body>

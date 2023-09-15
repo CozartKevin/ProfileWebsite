@@ -1,69 +1,243 @@
 /* Rework CSS for Grid */
+.body {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column dense;
+  grid-template-areas:
+    "site";
+  width: 100%;
+}
 
-.Body {  display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "Page";
-    width: 100%;
-    height: auto;
-  }
-  
-  .Page {  display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1.8fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-area: Page;
-  }
-  
-  .Header { grid-area: 1 / 1 / 2 / 2; }
-  
-  .Content {  display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "Content-Wrapper";
-    grid-area: 1 / 1 / 3 / 2;
-  }
-  
-  .Content-Wrapper {
-    grid-area: Content-Wrapper; 
-    width: 100%; 
-  }
-  
-  html, body , .Body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  /* For presentation only, no need to copy the code below */
-  
-  .Body * {
-    border: 1px solid red;
-    position: relative;
-  }
-  
-  .Body *:after {
-    content:attr(class); 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  section {
+.site {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-area: site;
+  width: 100%;
+}
+
+.header {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header-wrapper";
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.header-wrapper {  
+  position: relative;
+ 
+
+}
+
+.head-wrapper:not(.page-container){
+  padding-left:4.4vh;
+  padding-right:4.4vh;
+}
+
+
+.header-wrapper-inner {  
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.header-left {
+  flex: 1;
+
+  display: flex;
+  align-items: right;
+}
+
+.header-right {
+  flex: 3;
+  transition: height 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  float: right;
+}
+
+.content { 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "content-wrapper";
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.content-wrapper {  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "content-wrapper-sections";
+  grid-area: content-wrapper;
+}
+
+.content-wrapper-sections {  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ".";
+  grid-area: content-wrapper-sections;
+}
+
+
+html, body , .body {
+  line-height: 1.65;
+  background: #010101;
+  cursor: none; 
+  scroll-behavior: smooth;
+  margin: 0; 
+  height: 100%;
+}
+
+ section {
     display: block;  
     padding: 100px 50px 0;
   }
-  .Home *:after{
-    content:attr(class); 
-  }
+
+
+
+
+/*Cursor CSS */
+body .cursor {
+  pointer-events: none;
+}
+
+.hoverable {
+  cursor:none;
+}
+
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+body .cursor__ball circle {
+  fill: #f7f8fa;
+}
+
+
+.name-invisible {
+  visibility: hidden;
+}
+
+.header-name {
+  font-weight: 700;
+  font-size: 1.8em;
+  color: pink;
+
+}
+
+
+/* NAV */
+.header .nav{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.nav {
+  cursor: none;
+  font-weight: 500;
+  height: 100%;
+ 
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center
+}
+
+.nav-menu {
+  display:flex;
+  align-items: center;
+  
+}
+
+
+.nav-items {
+  padding: 0 1.3vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu-mobile {
+  color: white;
+}
+
+nav ul li span {
+  line-height: 1.3;
+  white-space: nowrap !important;
+}
+
+.nav-menu-span::before {
+  content: "0" counter(number);
+  display: inline-block;
+  font-weight: 700;
+  width: auto;
+  right: 0;
+  top: -0.75em;
+  line-height: 0.6em;
+  font-size: 0.6em;
+  height: auto;
+  position: relative;
+  opacity: 0.75;
+}
+
+
+nav ul {
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+ul li,ol li {
+  padding: 5px 0;
+  list-style-position: inside;
+}
+
+nav ul li {
+  list-style: none;
+  display: list-item;
+  position: relative;
+  padding: 0;
+}
+
+
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1.3vw;
+}
+
+
+#primary-menu {
+  font-family: 'Source Code Pro';
+  font-size: 1.1rem;
+  letter-spacing: -1px;
+  
+}

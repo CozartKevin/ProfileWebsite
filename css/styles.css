@@ -150,7 +150,9 @@ body .cursor__ball circle {
     display: flex;
     align-items: center
 }
-
+.hoverable {
+  cursor:none;
+}
 .nav-menu {
   display:flex;
   align-items: center;
@@ -389,9 +391,7 @@ h2 {
 }
 
 
-.elementor-section-wrap {
- 
-}
+
 
 .content-page {
   margin-left: -20px;
