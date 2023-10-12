@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "C:/Users/Raggy/Documents/GitHub/ProfileWebsite/index.html"
+            "file": "F:/Projects/Scales Website/ProfileWebsite/index.html"
         }
     ]
 }
