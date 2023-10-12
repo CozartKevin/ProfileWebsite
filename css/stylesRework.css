@@ -24,7 +24,7 @@
 
 .site {  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.05fr 1fr;
+  grid-template-rows: 0.1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-area: site;
@@ -36,7 +36,7 @@
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  align-items: end;
+
   grid-template-areas:
     "header-wrapper";
   grid-area: 1 / 1 / 2 / 4;
@@ -46,9 +46,9 @@
 
 .header-wrapper {  
   position: relative;
-      padding-left: 4.4vh;
+    padding-left: 4.4vh;
     padding-right: 4.4vh;
-
+    
 }
 
 .head-wrapper:not(.page-container){
@@ -64,19 +64,18 @@
 }
 
 .header-left {
-  flex: 1;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .header-right {
-  flex: 3;
-  transition: height 0.75s ease-out;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  float: right;
+ 
+}
+.right {
+  float:right;
 }
 
 .content { 
@@ -130,36 +129,38 @@ h1,h5,h6 {
 
  section {
     display: block;  
-   
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
   }
 
   .column-gap-default {
 
-  display: flex;
-  min-height: 100vh;
-  /* max-width: 1300px; */
-  padding-left: 100px;
-  padding-right:100px;
+    display: flex;
+    min-height: 100vh;
+    /* max-width: 1300px; */
+    position: relative;
   }
 
   .firstImpression{
     display: flex;
 
     position: relative;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+
   }
 
   .firstImpression-Wrapper{
     display: flex;
-    height: 20vh;
     align-items: center;
     flex-wrap: wrap;
     align-content: center;
     line-height: 1;
-    justify-content: flex-start;
+    justify-content: space-around;
   }
 
   .heading-title {
@@ -171,7 +172,7 @@ h1,h5,h6 {
  .heading-title-secondary-text {
   font-size: 2vw;
   text-transform: uppercase;
-  letter-spacing: 10px;
+  letter-spacing: 2.2px;
   text-shadow: -13px 11px 6px rgba(0,0,0,.4);
   text-indent: 0.75vw;
  }
@@ -179,12 +180,8 @@ h1,h5,h6 {
 
  .heading-title-tertiary-blurb {
   font-size: 1vw;
-  flex: 2;
-  display: flex;
-  letter-spacing: 4px;
-  justify-content: flex-start;
-  align-items: center;
-  text-indent: 10vw;
+  text-transform: uppercase;
+  letter-spacing: 4.4px;
  }
 
 /*Cursor CSS */
@@ -270,8 +267,8 @@ nav ul li span {
   display: flex;
   font-weight: 700;
   width: auto;
-  top: -1.65em;
-  right: 1em;
+  top: -2.75em;
+  right: -0.75em;
   line-height: 0.6em;
   font-size: 0.6em;
   height: auto;
@@ -281,12 +278,12 @@ nav ul li span {
 
 
 nav ul {
-  list-style-type: disc;
+ /* list-style-type: disc;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 40px;
+  padding-inline-start: 40px; */
 }
 
 ul li,ol li {
@@ -320,16 +317,23 @@ nav ul li a {
 }
 
 .home-section-background {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  align-content: center;
-  align-items: center;
-  background-image: url("../Images/fantasy-8013407.jpg");
+  background-image: url(../Images/fantasy-8013407.jpg);
   background-position: center center;
   background-size: cover;
 
+}
+
+.home-section-background-overlay{
+  height: 102%;
+  background-color: transparent;
+  background-image: linear-gradient(180deg,#2f25343d 60%,#1a191d 100%);
+  opacity: 1;
+  top: 0;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  transition: background .3s,border-radius .3s,opacity .3s;
+}
 }
 
 
