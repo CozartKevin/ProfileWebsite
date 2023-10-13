@@ -3,7 +3,8 @@
 /* Reset default styles */
 * {
   font-family: 'Source Code Pro';
-  
+  color:#f1e8f5;
+
   margin: 0;
   padding: 0;
 }
@@ -378,7 +379,8 @@ nav ul li a {
 }
 #main-header.header.-sticky.showed {
   position: fixed;
-  top: 0;
+  top: 0vh;
+  height: 7vh;
   width: 100%;
 }
 
